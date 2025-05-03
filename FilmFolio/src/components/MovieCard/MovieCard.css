@@ -1,0 +1,22 @@
+.movie-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.movie-card-image {
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: block;
+}
+
+.movie-card-image:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+  border-color: var(--primary-color);
+}

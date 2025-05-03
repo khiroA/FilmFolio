@@ -7,15 +7,14 @@ import Watchlist from './pages/Watchlist';
 import  MovieDetails  from './pages/MovieDetails';
 import Explore from './pages/Explore';
 import NotFound from './pages/NotFound';
-// import {Navbar} from './components/Navbar/Navbar';
-// import {Search} from './components/Search/Search';
+import Navbar from './components/Navbar/Navbar';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <Router>
-      {/* <Navbar />
-      <Search /> */}
+       <Navbar />
       <Routes>
 
         <Route path="/" element={<Home />} />
@@ -26,6 +25,7 @@ function App() {
         <Route path="*" element={<NotFound />} /> 
 
       </Routes>
+      <Footer />
     </Router>
   );
 }

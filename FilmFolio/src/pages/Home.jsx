@@ -1,8 +1,9 @@
 import React from 'react';
 import { useFetch } from '../hooks/useFetch';
-// import {MovieList} from '../components/MovieList/MovieList';
-// import {Slider} from '../components/Slider/Slider';
+import MovieList from '../components/MovieList/MovieList';
+import Slider from '../components/Slider/Slider';
 import { ENDPOINTS } from '../constants/api';
+import Categories from '../components/Categories/Categories';
 
 const Home = () => {
   const trending = useFetch(ENDPOINTS.trending);
@@ -10,16 +11,37 @@ const Home = () => {
   const upcoming = useFetch(ENDPOINTS.upcoming);
   const nowPlaying = useFetch(ENDPOINTS.nowPlaying);
 
-  console.log(upcoming.data?.results);
-  console.log(trending.data?.results);
-  console.log(topRated.data?.results);
-  console.log(nowPlaying.data?.results);
 
 
   return (
     <div>
-      <h1>FilmFilo</h1>
+      < Categories
+       />
 
+      <Slider 
+        title="Upcoming Movies" 
+        data={upcoming.data?.results} 
+        loading={upcoming.loading} 
+        error={upcoming.error} 
+      />
+      <MovieList 
+        title="Trending Movies" 
+        data={trending.data?.results} 
+        loading={trending.loading} 
+        error={trending.error} 
+      />
+      <MovieList 
+        title="Top Rated Movies" 
+        data={topRated.data?.results} 
+        loading={topRated.loading} 
+        error={topRated.error} 
+      />
+      <MovieList 
+        title="Now Playing Movies" 
+        data={nowPlaying.data?.results} 
+        loading={nowPlaying.loading} 
+        error={nowPlaying.error} 
+      />
     </div>
   );
 };
