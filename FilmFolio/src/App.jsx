@@ -10,23 +10,29 @@ import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import Footer from './components/Footer/Footer';
+import { FavoritesProvider } from './context/FavoritesContext';
+import { WatchlistProvider } from './context/WatchlistContext';
 
 function App() {
   return (
-    <Router>
-       <Navbar />
-      <Routes>
+  <FavoritesProvider>
+    <WatchlistProvider>
+      <Router>
+        <Navbar />
+        <Routes>
 
-        <Route path="/" element={<Home />} />
-        <Route path="/favorites" element={<Favorites />} />
-        <Route path="/watchlist" element={<Watchlist />} />
-        <Route path="/film/:id" element={<MovieDetails />} />
-        <Route path="/explore" element={<Explore />} />
-        <Route path="*" element={<NotFound />} /> 
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/film/:id" element={<MovieDetails />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="*" element={<NotFound />} /> 
 
-      </Routes>
-      <Footer />
-    </Router>
+        </Routes>
+        <Footer />
+      </Router>
+    </WatchlistProvider>
+  </FavoritesProvider>
   );
 }
 

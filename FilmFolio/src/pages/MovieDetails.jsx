@@ -6,5 +6,4 @@
     </>
   )
 }
-
-export default MovieDetails;
+export default MovieDetails
