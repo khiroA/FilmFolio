@@ -11,7 +11,7 @@ export const useFetch = (url) => {
       return;
     }
     
-
+    
     const fetchData = async () => {
       setLoading(true);
       try {

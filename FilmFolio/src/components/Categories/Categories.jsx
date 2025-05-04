@@ -5,10 +5,10 @@ import Error from '../Error/Error';
 import { GENRES } from '../../constants/api';
 import './Categories.css';
 
-const Categories = () => {
+const Categories = ({ activeGenre, onSelectGenre }) => {
   const { data, loading, error } = useFetch(GENRES);
   
-  // genres array.
+
   const categories = data ? data.genres : [];
 
   if (loading) return <Loading />;
@@ -18,9 +18,12 @@ const Categories = () => {
     <div className="categories-container">
       <ul className="categories-list">
         {categories.map((genre) => (
-          <li key={genre.id} className="category-item">
+          <button  key={genre.id}
+          className={activeGenre === genre.id ? "category-item-active" : "category-item"}
+          onClick={() => onSelectGenre(genre.id)}
+           >
             {genre.name}
-          </li>
+          </button>
         ))}
       </ul>
     </div>

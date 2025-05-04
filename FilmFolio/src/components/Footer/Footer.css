@@ -22,5 +22,5 @@
 }
 
 .footer-links li a:hover {
-  color: var(--primary-color, #ff6b6b);
+  color: var(--secondary-color, #ff6b6b);
 }

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
 import { IMG_BASE_URL } from '../../constants/api';
 import  Loading  from '../Loading/Loading';
@@ -35,6 +36,9 @@ const Slider = ({ data, loading, error }) => {
       />
       <div ref={sliderRef} className="upcoming-slider">
         {data.map(movie => (
+
+          <Link key={movie.id} to={`/film/${movie.id}`} className="slider-item-link">
+
           <div key={movie.id} className="upcoming-slide">
             {movie.backdrop_path ? (
               <img
@@ -48,7 +52,9 @@ const Slider = ({ data, loading, error }) => {
               </div>
             )}
           </div>
+          </Link>
         ))}
+     
       </div>
       <IoChevronForwardOutline
         onClick={slideRight}
