@@ -1,8 +1,15 @@
+import React from 'react';
+import './Error.css';
 
-export const Error = () => {
+const Error = ({ error }) => {
+
+  
   return (
-    <>
-    <p>Error</p>
-    </>
-  )
-}
+    <div className="error-container">
+      <h2 className="error-title">Something went wrong!!</h2>
+      <p className="error-message">{error || "An unexpected error occurred."}</p>
+    </div>
+  );
+};
+
+export default Error;

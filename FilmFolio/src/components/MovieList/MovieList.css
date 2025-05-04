@@ -1,0 +1,22 @@
+.movie-list-section {
+  padding: var(--padding);
+  margin-bottom: 2rem;
+  margin-inline: 50px;
+}
+
+.movie-list-section h2 {
+  margin-bottom: 1rem;
+}
+
+.movie-list-container {
+  display: flex;
+  gap: 1.5rem;
+  padding: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.movie-list-container::-webkit-scrollbar {
+  display: none;
+}
