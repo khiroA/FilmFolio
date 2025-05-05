@@ -19,11 +19,16 @@ const Pagination = ({ page, totalPages, onPageChange }) => {
         forcePage={page - 1} 
         onPageChange={(selectedItem) => onPageChange(selectedItem.selected + 1)}
         containerClassName={'pagination'}
-        pageClassName={'page-btn'}
-        activeClassName={'active'}
+        pageClassName={'page-btn'}                
+        pageLinkClassName={'page-link'}           
+        activeClassName={'active'}              
         previousClassName={'page-btn'}
+        previousLinkClassName={'page-link'}
         nextClassName={'page-btn'}
-        disabledClassName={'disabled'}
+        nextLinkClassName={'page-link'}
+        breakClassName={'page-btn'}
+        breakLinkClassName={'page-link'}
+        disabledClassName={'disabled'} 
       />
     </div>
   );

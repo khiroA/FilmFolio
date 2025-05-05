@@ -2,35 +2,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
   margin-top: 2rem;
+  gap: 0.5rem;
 }
 
 .page-btn {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: var(--background-color, #131520);
-  color: var(--font-color, #ffffff);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  list-style: none;
 }
 
-.page-btn:hover {
+.page-link {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--background-color, #131520);
+  color: var(--font-color, #ffffff);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.page-link:hover {
   background-color: var(--secondary-color, #2ecc71);
-  color: #131520;
+  color: var(--background-color, #131520);
   transform: scale(1.05);
 }
 
-.page-btn.active {
+.page-btn.active .page-link {
   background-color: var(--primary-color, #3498db);
   color: var(--background-color, #131520);
   font-weight: bold;
-}
-
-.page-btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-  transform: none;
 }

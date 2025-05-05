@@ -1,7 +1,7 @@
 import React from 'react';
 import './Loading.css';
 
-const Loading = ({ size = 48 }) => {
+const Loading = ({ size = 44 }) => {
   const spinnerStyle = {
     width: size,
     height: size,

@@ -17,13 +17,8 @@ const MovieCard = ({ id, title, imgUrl }) => {
       <div className="movie-card-icons">
         <span
           className="icon favorite-icon"
-          onClick={(e) => { e.preventDefault(); toggleFavorite(id); }}
-        >
-          {fav ? (
-              <AiFillHeart size={24} color="red" />
-            ) : (
-              <AiOutlineHeart size={24} color="gray"  />
-            )}
+          onClick={(e) => { e.preventDefault(); toggleFavorite(id); }}>
+          {fav ? ( <AiFillHeart size={24} color="red" />) : (<AiOutlineHeart size={24} color="gray"  />)}
         </span>
         <span
           className="icon pin-icon"
@@ -36,7 +31,7 @@ const MovieCard = ({ id, title, imgUrl }) => {
       <Link to={`/film/${id}`} className="movie-card-link">
         <div className="movie-card">
           {imgUrl ? (
-            <img src={imgUrl} alt={title} className="movie-card-image" />
+            <img src={imgUrl} alt={title} className="movie-card-image" loading="lazy" />
           ) : (
             <div className="movie-card-placeholder">No Image Available</div>
           )}
