@@ -27,7 +27,7 @@ export const WatchlistProvider = ({ children }) => {
   const isInWatchlist = (id) => watchlistIds.includes(id);
 
   return (
-    <WatchlistContext.Provider value={{ watchlistIds, toggleWatchlist, isInWatchlist }}>
+    <WatchlistContext.Provider value={{ watchlistIds, toggleWatchlist, isInWatchlist , setWatchlistIds}}>
       {children}
     </WatchlistContext.Provider>
   );
