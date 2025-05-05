@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import Loading from '../Loading/Loading';
-import Error from '../Error/Error';
+import ErrorDisplay from '../Error/Error';
 import { GENRES } from '../../constants/api';
 import './Categories.css';
 
@@ -12,7 +12,7 @@ const Categories = ({ activeGenre, onSelectGenre }) => {
   const categories = data ? data.genres : [];
 
   if (loading) return <Loading />;
-  if (error) return <Error error={error} />;
+  if (error) return <ErrorDisplay error={error} />;
   
   return (
     <div className="categories-container">

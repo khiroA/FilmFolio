@@ -1,6 +1,6 @@
 import React, { useState, useEffect , useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SEARCH_MOVIE } from '../../constants/api';
+import { SEARCH_MOVIE, IMG_BASE_URL } from '../../constants/api';
 import { useFetch } from '../../hooks/useFetch';
 import { useDebounce } from '../../hooks/useDebounce';
 import './Search.css';
@@ -56,9 +56,15 @@ return (
           <li
             key={movie.id}
             className="search-result-item"
-            onClick={() => handleSelect(movie.id)}
-          >
-            {movie.title}
+            onClick={() => handleSelect(movie.id)}>
+              {movie.poster_path && (
+                <img
+                  src={`${IMG_BASE_URL}${movie.poster_path}`}
+                  alt={movie.title}
+                  className="search-result-img" 
+                />
+              )}
+              <span className="search-result-title">{movie.title}</span>
           </li>
         ))}
       </ul>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
 import { IMG_BASE_URL } from '../../constants/api';
 import  Loading  from '../Loading/Loading';
-import Error from '../Error/Error';
+import ErrorDisplay from '../Error/Error';
 import "./Slider.css"
 
 const Slider = ({ data, loading, error }) => {
@@ -21,7 +21,7 @@ const Slider = ({ data, loading, error }) => {
     }
   };
 
-  if (error) return <Error error={error} />;
+  if (error) return <ErrorDisplay error={error} />;
   if (loading) return <Loading />;
   
 

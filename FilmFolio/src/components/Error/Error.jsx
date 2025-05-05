@@ -1,15 +1,15 @@
 import React from 'react';
 import './Error.css';
 
-const Error = ({ error }) => {
+const ErrorDisplay = ({ error }) => {
 
-  
+
   return (
     <div className="error-container">
       <h2 className="error-title">Something went wrong!!</h2>
-      <p className="error-message">{error || "An unexpected error occurred."}</p>
+      <p className="error-message">{error}</p>
     </div>
   );
 };
 
-export default Error;
+export default ErrorDisplay;
