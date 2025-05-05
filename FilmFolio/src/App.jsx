@@ -12,6 +12,7 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import { FavoritesProvider } from './context/FavoritesContext';
 import { WatchlistProvider } from './context/WatchlistContext';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
 
         </Routes>
         <Footer />
+        <ScrollToTop />
       </Router>
     </WatchlistProvider>
   </FavoritesProvider>

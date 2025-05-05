@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { SEARCH_MOVIE, IMG_BASE_URL } from '../../constants/api';
 import { useFetch } from '../../hooks/useFetch';
 import { useDebounce } from '../../hooks/useDebounce';
+import Loading from '../Loading/Loading';
 import './Search.css';
 
 const Search = () => {
@@ -48,7 +49,8 @@ return (
       onChange={(e) => setQuery(e.target.value)}
       className="search-input"
     />
-    {loading && <div className="search-loading">Loading...</div>}
+    {/* loading */}
+    {loading && <div className="search-loading"> {< Loading size={16} /> }</div>}
     {error && <div className="search-error">Error: {error}</div>}
     {results.length > 0 && (
       <ul className="search-results">
