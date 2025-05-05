@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { ENDPOINTS } from "../../constants/api";
 import Loading from "../Loading/Loading";
-import Error from "../Error/Error";
+import ErrorDisplay from "../Error/Error";
 import MovieCard from "../MovieCard/MovieCard";
 import Pagination from "../Pagination/Pagination";
 import { IMG_BASE_URL } from "../../constants/api";
@@ -20,7 +20,7 @@ export default function CategoryMovies({ genreId }) {
   }, [genreId]);
 
   if (loading) return <Loading />;
-  if (error) return <Error message={error} />;
+  if (error) return <ErrorDisplay error={error} />;
 
 
 
@@ -31,6 +31,7 @@ export default function CategoryMovies({ genreId }) {
          <MovieCard
          key={movie.id}
          title={movie.title}
+         id={movie.id}
          imgUrl={
            movie.poster_path
              ? `${IMG_BASE_URL}${movie.poster_path}`

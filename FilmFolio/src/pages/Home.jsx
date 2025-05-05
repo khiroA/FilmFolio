@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React, { useState } from "react";
 import Categories from "../components/Categories/Categories";
 import Slider from "../components/Slider/Slider";

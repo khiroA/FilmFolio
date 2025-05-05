@@ -8,6 +8,15 @@ const ENDPOINTS = {
   nowPlaying: `${BASE_URL}/movie/now_playing?api_key=${API_KEY}`,
   moviesByGenre: (genreId, page = 1) =>
     `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&page=${page}`,
+
+  movieDetails: (id) =>
+    `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`,
+
+  movieVideos: (id) =>
+    `${BASE_URL}/movie/${id}/videos?api_key=${API_KEY}&language=en-US`,
+
+  recommendations: (id) =>
+    `${BASE_URL}/movie/${id}/recommendations?api_key=${API_KEY}&language=en-US`,
 };
 
 const SEARCH_MOVIE = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=`;

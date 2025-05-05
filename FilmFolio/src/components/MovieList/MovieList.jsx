@@ -2,7 +2,7 @@ import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
 import { IMG_BASE_URL } from '../../constants/api';
 import Loading from '../Loading/Loading';
-import Error from '../Error/Error';
+import ErrorDisplay from '../Error/Error';
 import "./MovieList.css"
 
 
@@ -10,7 +10,7 @@ const MovieList = ({ title, data, loading, error }) => {
 
   
 
-  if (error) return  <Error error={error} /> ;
+  if (error) return  <ErrorDisplay error={error} /> ;
 
   return ( 
     < section className="movie-list-section">
