@@ -17,7 +17,7 @@ export const useFetch = (url) => {
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error('Response was not ok');
+          throw new Error( `Response was not ok : ${response.status} `);
         }
         const jsonData = await response.json();
         setData(jsonData);

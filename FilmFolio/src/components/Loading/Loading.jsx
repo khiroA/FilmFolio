@@ -1,9 +1,17 @@
+import React from 'react';
+import './Loading.css';
 
- const Loading = () => {
+const Loading = ({ size = 44 }) => {
+  const spinnerStyle = {
+    width: size,
+    height: size,
+  };
+
   return (
-    <>
-    <p>Loading</p>
-    </>
-  )
-}
-export default Loading
+    <div className='loader-con'>
+      <div className="loader" style={spinnerStyle}></div>
+    </div>
+  );
+};
+
+export default Loading;

@@ -1,0 +1,10 @@
+.favorites-page,
+.watchlist-page {
+  padding: 2rem;
+}
+
+.favorites-page h1,
+.watchlist-page h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}

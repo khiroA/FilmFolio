@@ -1,0 +1,28 @@
+.display-movies {
+  padding: 2rem;
+}
+
+.moviesgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.display-movies-footer {
+  margin-top: 1rem;
+}
+
+.clear-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: var(--primary-color-dark);
+}
