@@ -1,0 +1,48 @@
+.explore-container {
+  margin-left: 40px;
+
+  /* position: relative;
+  left: 100px; */
+}
+.explore-form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.explore-input {
+  width: 320px;
+  padding: 12px;
+  margin: 15px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.explore-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.explore-button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 91, 187, 0.3);
+}
+
+.explore-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
