@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 2rem auto;
   gap: 0.5rem;
 }
 
@@ -32,4 +32,15 @@
   background-color: var(--primary-color, #3498db);
   color: var(--background-color, #131520);
   font-weight: bold;
+}
+@media (max-width: 767px) {
+  .pagination {
+    width: 60%;
+    margin: 1rem auto;
+  }
+
+  .page-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+  }
 }

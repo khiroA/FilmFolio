@@ -16,7 +16,7 @@ export default function CategoryMovies({ genreId }) {
   );
 
   useEffect(() => {
-    setPage(1); // reset to page 1 when genre changes
+    setPage(1); // resetting to page 1 when genre changes
   }, [genreId]);
 
   if (loading) return <Loading />;

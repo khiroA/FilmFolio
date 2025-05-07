@@ -7,6 +7,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-logo {
+  text-align: left;
+}
+
 .navbar-logo-link {
   text-decoration: none;
   color: var(--font-color);
@@ -26,17 +30,15 @@
   color: var(--font-color);
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
+.navbar-links li a:hover,
 .active-link {
   background-color: var(--primary-color);
 }
 
-.navbar-links li a:hover {
-  background-color: var(--secondary-color, #2ecc71);
-}
 .nav-badge {
   display: inline-block;
   background-color: var(--secondary-color);
@@ -47,4 +49,67 @@
   border-radius: 12px;
   margin-left: 4px;
   vertical-align: middle;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--font-color);
+  margin-right: 1rem;
+}
+
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  .burger-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+
+  .navbar-logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
 }

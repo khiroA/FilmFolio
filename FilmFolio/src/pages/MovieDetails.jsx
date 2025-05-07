@@ -115,7 +115,6 @@ const MovieDetails = () => {
         }
       </div>
 
-      {/* Recommendations Section */}
        <div className="movie-recommendations">
         <h2>Recommended</h2>
         {recLoading 
