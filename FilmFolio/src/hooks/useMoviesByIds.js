@@ -23,7 +23,7 @@ const useMoviesByIds = (ids) => {
               throw new Error(`Request failed : ${response.status}`);
             }
             return await response.json();
-          })
+          }),
         );
         setMovies(moviesData);
       } catch (err) {

@@ -9,25 +9,22 @@ import { useFetch } from "../hooks/useFetch";
 export default function Home() {
   const [activeGenre, setActiveGenre] = useState(null);
 
- 
   const trending = useFetch(ENDPOINTS.trending);
   const topRated = useFetch(ENDPOINTS.topRated);
   const upcoming = useFetch(ENDPOINTS.upcoming);
   const nowPlaying = useFetch(ENDPOINTS.nowPlaying);
 
-
-
-
-
   return (
     <div className="main-content">
       <Categories
         activeGenre={activeGenre}
-        onSelectGenre={(id) => setActiveGenre((prev) => (prev === id ? null : id))}
+        onSelectGenre={(id) =>
+          setActiveGenre((prev) => (prev === id ? null : id))
+        }
       />
 
       {/* If no active genres then show the default sections*/}
-      {!activeGenre ? ( 
+      {!activeGenre ? (
         <>
           <Slider
             title="Upcoming Movies"

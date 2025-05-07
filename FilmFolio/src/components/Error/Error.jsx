@@ -1,9 +1,7 @@
-import React from 'react';
-import './Error.css';
+import React from "react";
+import "./Error.css";
 
 const ErrorDisplay = ({ error }) => {
-
-
   return (
     <div className="error-container">
       <h2 className="error-title">Something went wrong!!</h2>

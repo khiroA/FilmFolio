@@ -12,7 +12,7 @@ export default function CategoryMovies({ genreId }) {
   const [page, setPage] = useState(1);
 
   const { data, loading, error } = useFetch(
-    ENDPOINTS.moviesByGenre(genreId, page)
+    ENDPOINTS.moviesByGenre(genreId, page),
   );
 
   useEffect(() => {
@@ -22,22 +22,18 @@ export default function CategoryMovies({ genreId }) {
   if (loading) return <Loading />;
   if (error) return <ErrorDisplay error={error} />;
 
-
-
   return (
     <div className="category-movies">
       <div className="movies-grid">
         {data.results?.map((movie) => (
-         <MovieCard
-         key={movie.id}
-         title={movie.title}
-         id={movie.id}
-         imgUrl={
-           movie.poster_path
-             ? `${IMG_BASE_URL}${movie.poster_path}`
-             : null }
-       />
-
+          <MovieCard
+            key={movie.id}
+            title={movie.title}
+            id={movie.id}
+            imgUrl={
+              movie.poster_path ? `${IMG_BASE_URL}${movie.poster_path}` : null
+            }
+          />
         ))}
       </div>
       <Pagination

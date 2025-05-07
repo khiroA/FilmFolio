@@ -16,9 +16,9 @@ const DisplayMovies = ({
   onClear,
   clearText = "Clear All",
 }) => {
-  if (loading) return  < Loading />;
-  if (error) return <ErrorDisplay error={error.message}/>;
-  if (movies.length === 0) return ( <p>No movies to display.</p>);
+  if (loading) return <Loading />;
+  if (error) return <ErrorDisplay error={error.message} />;
+  if (movies.length === 0) return <p>No movies to display.</p>;
   return (
     <div className="display-movies">
       <div className="movies-grid">
@@ -39,14 +39,12 @@ const DisplayMovies = ({
           totalPages={totalPages}
           onPageChange={onPageChange}
         />
-          {onClear && (
+        {onClear && (
           <button onClick={onClear} className="clear-button">
             {clearText}
           </button>
         )}
-       
-       </div>
-    
+      </div>
     </div>
   );
 };

@@ -1,23 +1,20 @@
 import React from "react";
 import { useWatchlist } from "../context/WatchlistContext";
-import useMoviesByIds from "../hooks/useMoviesByIds";      
+import useMoviesByIds from "../hooks/useMoviesByIds";
 import usePagination from "../hooks/usePagination";
 import DisplayMovies from "../components/DisplayMovies/DisplayMovies";
-import "./styles/ListPages.css"
+import "./styles/ListPages.css";
 
-  const   Watchlist = () =>  {
-
+const Watchlist = () => {
   const { watchlistIds, setWatchlistIds } = useWatchlist();
-  const { movies, loading, error }        = useMoviesByIds(watchlistIds);
+  const { movies, loading, error } = useMoviesByIds(watchlistIds);
 
-  const { pageItems, page, setPage, totalPages } =
-    usePagination(movies, 12);
+  const { pageItems, page, setPage, totalPages } = usePagination(movies, 12);
 
   const handleClear = () => setWatchlistIds([]);
 
   return (
-    
-    <div className="watchlist-page"> 
+    <div className="watchlist-page">
       <h1>Your Watchlist</h1>
       <DisplayMovies
         movies={pageItems}
@@ -28,11 +25,9 @@ import "./styles/ListPages.css"
         onPageChange={setPage}
         onClear={handleClear}
         clearText={"Clear Watchlist"}
-      
       />
-      </div>
-    
+    </div>
   );
-}
+};
 
 export default Watchlist;

@@ -1,5 +1,5 @@
-import React from 'react';
-import './Loading.css';
+import React from "react";
+import "./Loading.css";
 
 const Loading = ({ size = 44 }) => {
   const spinnerStyle = {
@@ -8,7 +8,7 @@ const Loading = ({ size = 44 }) => {
   };
 
   return (
-    <div className='loader-con'>
+    <div className="loader-con">
       <div className="loader" style={spinnerStyle}></div>
     </div>
   );
