@@ -16,6 +16,7 @@ export default function Explore() {
 
   const handleGenerate = async () => {
     const titles = await fetchRecommendations(prompt);
+
     const fetchedIds = await Promise.all(
       titles.map(async t => {
         const res = await fetch(`${SEARCH_MOVIE}${encodeURIComponent(t)}`);
@@ -25,13 +26,14 @@ export default function Explore() {
       })
     );
     setIds(fetchedIds.filter(Boolean));
+    setPrompt("");
   };
 
 
 
   return (
     <div className="explore-container" >
-      <h2>Explore with AI</h2>
+      <h2 >Explore with AI</h2>
       <div className="explore-form">
       <input
       className="explore-input"

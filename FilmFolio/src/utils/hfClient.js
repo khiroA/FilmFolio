@@ -26,7 +26,7 @@ export async function getAiMovieTitles(userPrompt = "", systemPrompt) {
 
   const json = await res.json();
 
-  if (json.error.code === 429) {
+  if (json.error?.code === 429) {
     throw new Error("Daily limit exceeded. Please try again later");
   }
 
@@ -37,6 +37,7 @@ export async function getAiMovieTitles(userPrompt = "", systemPrompt) {
     if (!Array.isArray(parsed)) {
       throw new Error("Error ocurred due the response format");
     }
+
     return parsed.slice(0, 3);
   } catch (err) {
     console.error("Parsing Error:", modelOutput);

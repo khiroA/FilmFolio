@@ -21,7 +21,7 @@ const DisplayMovies = ({
   if (movies.length === 0) return ( <p>No movies to display.</p>);
   return (
     <div className="display-movies">
-      <div className="moviesgrid">
+      <div className="movies-grid">
         {movies.map((movie) => (
           <MovieCard
             key={movie.id}

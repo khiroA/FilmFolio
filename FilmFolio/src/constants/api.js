@@ -23,14 +23,14 @@ const SEARCH_MOVIE = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=`;
 const IMG_BASE_URL = "https://image.tmdb.org/t/p/w1280";
 const GENRES = `${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`;
 
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+const MODEL_ID = "qwen/qwen3-1.7b:free";
+
 const SYSTEM_PROMPT = `You are a movie recommendation engine.  
 Analyze the user’s request and return exactly three movie titles that best match.  
 **Output format**: a JSON array of strings, e.g. ["Titanic","Inception","The Godfather"].  
 Do NOT include any extra commentary, numbering, or explanation.  
 If the user input is empty, return three generally popular, highly rated movies.`.trim();
-
-const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
-const MODEL_ID = "qwen/qwen3-1.7b:free";
 
 export {
   ENDPOINTS,

@@ -12,3 +12,8 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
 }
+.movies-grid .movie-card-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}

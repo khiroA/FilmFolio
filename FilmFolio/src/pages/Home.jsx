@@ -20,7 +20,7 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div className="main-content">
       <Categories
         activeGenre={activeGenre}
         onSelectGenre={(id) => setActiveGenre((prev) => (prev === id ? null : id))}

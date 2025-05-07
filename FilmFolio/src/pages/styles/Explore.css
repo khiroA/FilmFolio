@@ -1,13 +1,16 @@
-.explore-container {
-  margin-left: 40px;
-
-  /* position: relative;
-  left: 100px; */
-}
 .explore-form {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
+}
+
+.explore-container > h2 {
+  padding: 1rem;
+  color: #77b1f0;
+  text-align: center;
+  transform: translateX(-30px);
+  color: var(--font-color);
 }
 .explore-input {
   width: 320px;
@@ -28,9 +31,10 @@
 
 .explore-button {
   padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--font-color);
   font-size: 16px;
+  font-weight: 500;
   border: none;
   border-radius: 8px;
   cursor: pointer;

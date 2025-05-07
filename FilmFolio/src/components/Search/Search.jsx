@@ -49,7 +49,7 @@ return (
       onChange={(e) => setQuery(e.target.value)}
       className="search-input"
     />
-    {/* loading */}
+    
     {loading && <div className="search-loading"> {< Loading size={16} /> }</div>}
     {error && <div className="search-error">Error: {error}</div>}
     {results.length > 0 && (
