@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { FaArrowUp } from 'react-icons/fa'; 
-import './ScrollToTop.css';  
+import React, { useState, useEffect } from "react";
+import { FaArrowUp } from "react-icons/fa";
+import "./ScrollToTop.css";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,7 +8,6 @@ const ScrollToTop = () => {
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 400) {
-
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -16,14 +15,14 @@ const ScrollToTop = () => {
     };
 
     window.addEventListener("scroll", toggleVisibility);
-    
+
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 

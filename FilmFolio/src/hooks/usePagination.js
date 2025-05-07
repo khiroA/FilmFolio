@@ -5,7 +5,7 @@ const usePagination = (items = [], pageSize = 12) => {
 
   const totalPages = useMemo(
     () => Math.max(1, Math.ceil(items.length / pageSize)),
-    [items.length, pageSize]
+    [items.length, pageSize],
   );
 
   const pageItems = useMemo(() => {

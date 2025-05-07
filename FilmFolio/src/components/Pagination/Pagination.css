@@ -19,7 +19,9 @@
   background-color: var(--background-color, #131520);
   color: var(--font-color, #ffffff);
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .page-link:hover {
